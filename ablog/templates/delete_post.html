@@ -5,6 +5,8 @@
 <h1>Delete Post</h1>
 <br><br/>
 
+{% if user.is_authenticated %}
+	{% if user.id == post.author.id %}
 <h3>Delete: {{ post.title }}</h3>
 
 <div class="form-group">
@@ -14,5 +16,6 @@
 		<button class="btn btn-secondary">Delete Post!</button>
 	</form>
 </div>
-
+{% endif %}
+{% endif %}
 {% endblock %}
