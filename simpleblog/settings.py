@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&3=jx-0sq2!d*@wi%-mw-ab3!@8pgye*qybzxhc@jm1waul_c&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.28']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,3 +126,6 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
