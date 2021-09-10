@@ -7,7 +7,6 @@ from ckeditor.fields import RichTextField
 
 class Category(models.Model):
 	name = models.CharField(max_length=225)
-
 	def __str__(self):
 		return self.name
 
@@ -26,9 +25,10 @@ class Post(models.Model):
 
 	def total_likes(self):
 		return self.likes.count()
-		
+
 	def __str__(self):
 		return self.title + ' | ' + str(self.author)
 
 	def get_absolute_url(self):
 		return reverse('home')
+
